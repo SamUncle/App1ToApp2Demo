@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="TipPopView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view alpha="0.65000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8ko-uW-oHk">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NzR-s8-exi">
+                    <rect key="frame" x="50" y="273.5" width="275" height="120"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="温馨提示" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v2F-FS-Wj2">
+                            <rect key="frame" x="20" y="15" width="235" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="cze-jH-avR"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DYS-f7-4Eq">
+                            <rect key="frame" x="0.0" y="75" width="275" height="45"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGW-DW-Me2">
+                                    <rect key="frame" x="0.0" y="1" width="137" height="44"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="取消">
+                                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="touchClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="ePI-1o-Svy"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTe-Mw-hCm">
+                                    <rect key="frame" x="138" y="1" width="137" height="44"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="确定"/>
+                                    <connections>
+                                        <action selector="touchClick:" destination="iN0-l3-epB" eventType="touchUpInside" id="Zub-MQ-lR1"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="GGW-DW-Me2" firstAttribute="leading" secondItem="DYS-f7-4Eq" secondAttribute="leading" id="2dL-5n-kzn"/>
+                                <constraint firstAttribute="trailing" secondItem="GTe-Mw-hCm" secondAttribute="trailing" id="3t2-R3-lL0"/>
+                                <constraint firstItem="GTe-Mw-hCm" firstAttribute="width" secondItem="GGW-DW-Me2" secondAttribute="width" id="JEN-EF-6y4"/>
+                                <constraint firstItem="GGW-DW-Me2" firstAttribute="top" secondItem="DYS-f7-4Eq" secondAttribute="top" constant="1" id="KJy-Gb-xLB"/>
+                                <constraint firstAttribute="bottom" secondItem="GTe-Mw-hCm" secondAttribute="bottom" id="O32-he-qdv"/>
+                                <constraint firstAttribute="bottom" secondItem="GGW-DW-Me2" secondAttribute="bottom" id="cNu-MH-Gg6"/>
+                                <constraint firstItem="GTe-Mw-hCm" firstAttribute="leading" secondItem="GGW-DW-Me2" secondAttribute="trailing" constant="1" id="cRK-Xd-JrN"/>
+                                <constraint firstAttribute="height" constant="45" id="etQ-fb-8qW"/>
+                                <constraint firstItem="GTe-Mw-hCm" firstAttribute="top" secondItem="DYS-f7-4Eq" secondAttribute="top" constant="1" id="u4M-fU-fk2"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="DYS-f7-4Eq" firstAttribute="leading" secondItem="NzR-s8-exi" secondAttribute="leading" id="5Pv-pg-QRJ"/>
+                        <constraint firstAttribute="height" constant="120" id="RsN-QY-Uw1"/>
+                        <constraint firstAttribute="trailing" secondItem="DYS-f7-4Eq" secondAttribute="trailing" id="Sw4-Jq-ieM"/>
+                        <constraint firstItem="v2F-FS-Wj2" firstAttribute="top" secondItem="NzR-s8-exi" secondAttribute="top" constant="15" id="XWC-Wt-Z90"/>
+                        <constraint firstAttribute="trailing" secondItem="v2F-FS-Wj2" secondAttribute="trailing" constant="20" id="XvG-ce-kFc"/>
+                        <constraint firstItem="v2F-FS-Wj2" firstAttribute="leading" secondItem="NzR-s8-exi" secondAttribute="leading" constant="20" id="c8X-oG-aZX"/>
+                        <constraint firstAttribute="bottom" secondItem="DYS-f7-4Eq" secondAttribute="bottom" id="eB3-rO-Lsv"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstItem="NzR-s8-exi" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="78F-Ox-Bm4"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="8ko-uW-oHk" secondAttribute="trailing" id="9l2-Xc-EWH"/>
+                <constraint firstItem="8ko-uW-oHk" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="EHS-FR-Ki3"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="8ko-uW-oHk" secondAttribute="bottom" id="I8h-va-EgO"/>
+                <constraint firstItem="8ko-uW-oHk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="IVV-WT-b5u"/>
+                <constraint firstItem="NzR-s8-exi" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="50" id="LEk-nJ-9RC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="NzR-s8-exi" secondAttribute="trailing" constant="50" id="XpM-1A-cJt"/>
+                <constraint firstItem="NzR-s8-exi" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="xCH-7F-VFO"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="cancelButton" destination="GGW-DW-Me2" id="FdK-Mq-W7V"/>
+                <outlet property="confrimButton" destination="GTe-Mw-hCm" id="ro5-hY-w95"/>
+                <outlet property="popView" destination="NzR-s8-exi" id="Xfl-Cf-VJf"/>
+                <outlet property="title" destination="v2F-FS-Wj2" id="qZ6-2k-qHu"/>
+            </connections>
+            <point key="canvasLocation" x="53.600000000000001" y="76.911544227886068"/>
+        </view>
+    </objects>
+</document>

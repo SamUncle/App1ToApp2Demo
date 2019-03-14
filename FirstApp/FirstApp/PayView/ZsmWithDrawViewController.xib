@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ZsmWithDrawViewController">
+            <connections>
+                <outlet property="coinType" destination="UV6-xr-cqC" id="Azi-Mr-tIh"/>
+                <outlet property="count" destination="iq8-fw-n7D" id="ubI-cZ-C9b"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Agq-Ig-Hyl">
+                    <rect key="frame" x="0.0" y="30" width="375" height="200"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="币种：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nAe-LH-W8e">
+                            <rect key="frame" x="15" y="20" width="52" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="提币数量：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoD-pp-feD">
+                            <rect key="frame" x="15" y="61" width="87" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="牛顿币" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UV6-xr-cqC">
+                            <rect key="frame" x="308" y="20" width="52" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100牛顿币" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iq8-fw-n7D">
+                            <rect key="frame" x="279" y="61" width="81" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ARV-oE-1TD">
+                            <rect key="frame" x="20" y="132" width="335" height="45"/>
+                            <color key="backgroundColor" red="0.38340133430000001" green="0.54046779869999995" blue="0.83532440659999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="qHI-un-32X"/>
+                            </constraints>
+                            <state key="normal" title="确认提币">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="5"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="confirmWithDraw:" destination="-1" eventType="touchUpInside" id="ffx-JX-J31"/>
+                            </connections>
+                        </button>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yce-mX-eVp">
+                            <rect key="frame" x="20" y="102" width="335" height="1"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="8g8-c9-4h8"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="4u3-pH-cgx"/>
+                        <constraint firstAttribute="trailing" secondItem="yce-mX-eVp" secondAttribute="trailing" constant="20" id="64g-Zc-EA2"/>
+                        <constraint firstItem="nAe-LH-W8e" firstAttribute="leading" secondItem="Agq-Ig-Hyl" secondAttribute="leading" constant="15" id="A1A-3b-oiA"/>
+                        <constraint firstItem="ARV-oE-1TD" firstAttribute="leading" secondItem="Agq-Ig-Hyl" secondAttribute="leading" constant="20" id="E4e-Tc-Dx2"/>
+                        <constraint firstItem="nAe-LH-W8e" firstAttribute="top" secondItem="Agq-Ig-Hyl" secondAttribute="top" constant="20" id="O3b-pC-zPs"/>
+                        <constraint firstItem="yce-mX-eVp" firstAttribute="leading" secondItem="Agq-Ig-Hyl" secondAttribute="leading" constant="20" id="Qnc-f6-N90"/>
+                        <constraint firstItem="aoD-pp-feD" firstAttribute="leading" secondItem="Agq-Ig-Hyl" secondAttribute="leading" constant="15" id="UfF-9O-NPK"/>
+                        <constraint firstItem="aoD-pp-feD" firstAttribute="top" secondItem="nAe-LH-W8e" secondAttribute="bottom" constant="20" id="XYe-qL-Nrx"/>
+                        <constraint firstAttribute="bottom" secondItem="ARV-oE-1TD" secondAttribute="bottom" constant="23" id="YRo-Jb-lag"/>
+                        <constraint firstItem="yce-mX-eVp" firstAttribute="top" secondItem="aoD-pp-feD" secondAttribute="bottom" constant="20" id="YxW-hQ-prl"/>
+                        <constraint firstAttribute="trailing" secondItem="ARV-oE-1TD" secondAttribute="trailing" constant="20" id="hIE-fU-zbr"/>
+                        <constraint firstAttribute="trailing" secondItem="iq8-fw-n7D" secondAttribute="trailing" constant="15" id="qNk-4H-zJa"/>
+                        <constraint firstItem="iq8-fw-n7D" firstAttribute="top" secondItem="UV6-xr-cqC" secondAttribute="bottom" constant="20" id="sH9-st-B0Y"/>
+                        <constraint firstItem="UV6-xr-cqC" firstAttribute="top" secondItem="Agq-Ig-Hyl" secondAttribute="top" constant="20" id="sfg-mr-Bhy"/>
+                        <constraint firstAttribute="trailing" secondItem="UV6-xr-cqC" secondAttribute="trailing" constant="15" id="wob-4g-KjZ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Agq-Ig-Hyl" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="10" id="DTf-tx-g3V"/>
+                <constraint firstItem="Agq-Ig-Hyl" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="Wpk-Dk-lsz"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Agq-Ig-Hyl" secondAttribute="trailing" id="s00-LB-IWh"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="138.40000000000001" y="129.98500749625188"/>
+        </view>
+    </objects>
+</document>
